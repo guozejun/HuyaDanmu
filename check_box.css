@@ -1,0 +1,64 @@
+/**
+* Checkbox Three
+*/
+.checkboxThree {
+    width: 60px;
+    height: 21px;
+    background: #333;
+    margin: 5px 5px;
+    border-radius: 25px;
+    position: relative;
+    }
+
+    /**
+* Create the text for the On position
+*/
+.checkboxThree:before {
+    content: 'On';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    height: 1px;
+    color: #4d90fe;
+    font-size: 8px;
+    }
+    /**
+    * Create the label for the off position
+    */
+    .checkboxThree:after {
+    content: 'Off';
+    position: absolute;
+    top: 6px;
+    left: 42px;
+    height: 1px;
+    color: #ddd;
+    font-size: 8px;
+    }
+
+    /**
+* Create the pill to click
+*/
+.checkboxThree label {
+    display: block;
+    width: 26px;
+    height: 11px;
+    border-radius: 25px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+    left: 6px;
+    background: #ddd;
+    }
+    /**
+    * Create the checkbox event for the label
+    */
+    .checkboxThree input[type=checkbox]:checked + label {
+    left: 30px;
+    background: #4d90fe;
+    }

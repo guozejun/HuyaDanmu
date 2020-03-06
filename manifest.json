@@ -1,0 +1,38 @@
+{
+    "name": "Getting Started Example",
+    "version": "1.0",
+    "description": "Build an Extension!",
+    "permissions": [
+        "activeTab",
+        "declarativeContent",
+        "storage",
+        "http://huya.com/*",
+        "https://huya.com/*"
+    ],
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "36": "images/favicon36.png",
+            "48": "images/favicon48.png",
+            "72": "images/favicon72.png",
+            "96": "images/favicon96.png"
+        }
+    },
+    "icons": {
+        "36": "images/favicon36.png",
+        "48": "images/favicon48.png",
+        "72": "images/favicon72.png",
+        "96": "images/favicon96.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.huya.com/840747"
+            ],
+            "js": [
+                "HuyaDanmu.js"
+            ]
+        }
+    ],
+    "manifest_version": 2
+}
